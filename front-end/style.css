@@ -274,3 +274,16 @@ body {
   height: 50px;
   width: auto;
 }
+.categories a {
+  padding: 10px 15px;
+  background: #eee;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.categories a:hover {
+  background: #22c55e;
+  color: white;
+}
