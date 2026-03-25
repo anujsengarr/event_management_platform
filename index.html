@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GLA Events | Campus Life Curated</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind Configuration -->
+    <script src="tailwind-config.js"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-background text-on-background antialiased selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+    <!-- Top Navigation Bar -->
+    <nav
+        class="fixed top-0 w-full flex justify-between items-center px-8 py-4 backdrop-blur-md bg-gradient-to-r from-[#275427] to-[#3d7a3d] dark:from-emerald-950 dark:to-emerald-900 z-50 shadow-2xl shadow-emerald-950/20">
+        <div class="text-2xl font-black tracking-tighter text-white">GLA Events</div>
+        <div class="hidden md:flex items-center gap-8 font-['Inter'] font-medium tracking-tight">
+            <a class="text-emerald-300 font-bold border-b-2 border-emerald-300 pb-1" href="#">Discover</a>
+            <a class="text-emerald-50/80 hover:text-white transition-colors" href="#">Calendar</a>
+            <a class="text-emerald-50/80 hover:text-white transition-colors" href="#">Clubs</a>
+            <a class="text-emerald-50/80 hover:text-white transition-colors" href="#">Venues</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button
+                class="p-2 text-white hover:bg-white/10 rounded-xl transition-all duration-300 scale-95 active:scale-90">
+                <span class="material-symbols-outlined" data-icon="search">search</span>
+            </button>
+            <button
+                class="px-5 py-2 text-white font-semibold hover:bg-white/10 rounded-xl transition-all">Login</button>
+            <button
+                class="px-5 py-2 bg-white text-primary font-bold rounded-xl shadow-lg hover:shadow-xl transition-all transform active:scale-95">Sign
+                Up</button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="relative hero-clip pt-32 pb-48 bg-gradient-to-br from-[#275427] to-[#1d3d1d] overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-tertiary-fixed blur-[120px] rounded-full"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-emerald-400 blur-[100px] rounded-full"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-8 relative z-10 text-center">
+            <h1 class="text-[3.5rem] md:text-[52px] font-black text-white leading-[1.1] tracking-[-0.04em] mb-6">
+                Your Campus. Your Events.
+            </h1>
+            <p class="text-xl md:text-2xl text-emerald-100/80 font-medium max-w-2xl mx-auto mb-12">
+                Explore workshops, fests, hackathons and everything happening at GLA University
+            </p>
+            <div class="max-w-2xl mx-auto relative group">
+                <div
+                    class="absolute inset-y-0 left-6 flex items-center pointer-events-none text-primary/40 group-focus-within:text-primary transition-colors">
+                    <span class="material-symbols-outlined" data-icon="search">search</span>
+                </div>
+                <input
+                    class="w-full pl-16 pr-8 py-6 bg-white text-on-background text-lg rounded-2xl border-none shadow-2xl focus:ring-4 focus:ring-emerald-400/20 transition-all outline-none"
+                    placeholder="Search for events, clubs, or keywords..." type="text" />
+            </div>
+            <div class="flex flex-wrap justify-center gap-3 mt-8">
+                <span
+                    class="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/10 text-white rounded-full text-sm font-semibold hover:bg-white/20 cursor-pointer transition-colors">#Hackathon</span>
+                <span
+                    class="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/10 text-white rounded-full text-sm font-semibold hover:bg-white/20 cursor-pointer transition-colors">#Workshop</span>
+                <span
+                    class="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/10 text-white rounded-full text-sm font-semibold hover:bg-white/20 cursor-pointer transition-colors">#Cultural
+                    Fest</span>
+                <span
+                    class="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/10 text-white rounded-full text-sm font-semibold hover:bg-white/20 cursor-pointer transition-colors">#Sports</span>
+            </div>
+        </div>
+    </header>
+    <!-- Trending Now Section -->
+    <section class="max-w-7xl mx-auto px-8 py-24">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <h2 class="text-3xl font-extrabold tracking-tight text-on-background flex items-center gap-3">
+                    Trending Now <span class="text-2xl">🔥</span>
+                </h2>
+                <p class="text-on-surface-variant mt-2">The most anticipated events on campus right now.</p>
+            </div>
+            <a class="text-primary font-bold flex items-center gap-1 hover:gap-2 transition-all group" href="#">
+                See all <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Event Card 1 -->
+            <div
+                class="group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition-all duration-500 transform hover:-translate-y-2 cursor-pointer">
+                <div class="h-56 overflow-hidden relative">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        data-alt="modern tech hackathon event with young people coding on laptops in a neon lit dark university hall"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtLs9ZoB_mSrfQ2VJD_Uc5g_xF5RlHPpEGOSsifzQuWvyfAGSg6jdIpHIRoQer9vSK06u8U0KO75ghNk76YZPgPejBhsNwBFH2fiak2X49ZksOc51nOSEQEKmzbXqxnjhJujMM76tD34f8jgwDp4xRzX4Qnclb9qKEluX2GN5XhNI0dXjZ6n_B4p7U0A6cTPaDAB1rxl7j1xagkmAqCJ_X6zKGFEiVy4oOYUcbrAT3gh27VkguaMuUP73Reb9L92LhRNIIKgOHShhp" />
+                    <button
+                        class="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center text-error hover:bg-white transition-colors">
+                        <span class="material-symbols-outlined" data-icon="favorite"
+                            style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <span
+                        class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-wider rounded-lg mb-4">Tech
+                        Club</span>
+                    <h3
+                        class="text-xl font-bold text-on-background mb-3 leading-tight group-hover:text-primary transition-colors line-clamp-2">
+                        Infinite Loop Hackathon 2024</h3>
+                    <div class="flex items-center gap-2 text-on-surface-variant text-sm font-medium">
+                        <span class="material-symbols-outlined text-lg" data-icon="calendar_today">calendar_today</span>
+                        Oct 14, 2024
+                    </div>
+                </div>
+            </div>
+            <!-- Event Card 2 -->
+            <div
+                class="group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition-all duration-500 transform hover:-translate-y-2 cursor-pointer">
+                <div class="h-56 overflow-hidden relative">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        data-alt="large outdoor university campus festival with colorful stage lights and students dancing at night"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZSlDjVVO_JJC0KTJUixvZh4Ah6MNou7gsTKHPfUWmjQlLxURtNYgak3CJ7eB_WRhZB4amLKfeFJeZYXdOzljA90TkxuHIyHqz3nj_El1mP6_HkWgcl-PpeR8BF8CqkwfAhEnDUA8mTReWxsvmHMkN-8uWvjjKyIGBKZzJ0e06CSBL8cHwqoHNYKH3Wp9Yfk8br9lAPGX7viy85GDO-8b_FUoyMNmYZvnB6cxdjlJlXHppCM74moHpwwyZq0FlPWNz2sus_Ggd1FYP" />
+                    <button
+                        class="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center text-on-surface-variant hover:bg-white transition-colors">
+                        <span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <span
+                        class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-wider rounded-lg mb-4">Cultural
+                        Committee</span>
+                    <h3
+                        class="text-xl font-bold text-on-background mb-3 leading-tight group-hover:text-primary transition-colors line-clamp-2">
+                        Vibrance: The Annual Cultural Fest</h3>
+                    <div class="flex items-center gap-2 text-on-surface-variant text-sm font-medium">
+                        <span class="material-symbols-outlined text-lg" data-icon="calendar_today">calendar_today</span>
+                        Nov 02, 2024
+                    </div>
+                </div>
+            </div>
+            <!-- Event Card 3 -->
+            <div
+                class="group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition-all duration-500 transform hover:-translate-y-2 cursor-pointer">
+                <div class="h-56 overflow-hidden relative">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        data-alt="creative design workshop with people sketching and using colorful sticky notes on a white board"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrfUc-l51V-Xie_q6TA3ksL2h2NEBiTnax0RhpnZSIHttZ_sN0taRlljICFM6o3MjkIff5IvvYzWbHXuF6FUGd_WMD17SU38Ba30sTiQy0acRwLYzZ5uZB5QCdxFJx6jy8fydUC_M87QFNcNE7xl8DvzPW7dO6n1bb06KP_KXEiNV0gXEE18M6JvMlGiuj-UkJDh_L0pIKjBIJPHflSrgwG_PTif9s4FUwxoovgipyr83iDyxKuHsToa8c9rFQLN1MV5HcCxorytLT" />
+                    <button
+                        class="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center text-on-surface-variant hover:bg-white transition-colors">
+                        <span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <span
+                        class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-wider rounded-lg mb-4">Design
+                        Studio</span>
+                    <h3
+                        class="text-xl font-bold text-on-background mb-3 leading-tight group-hover:text-primary transition-colors line-clamp-2">
+                        UI/UX Intensive Masterclass</h3>
+                    <div class="flex items-center gap-2 text-on-surface-variant text-sm font-medium">
+                        <span class="material-symbols-outlined text-lg" data-icon="calendar_today">calendar_today</span>
+                        Oct 18, 2024
+                    </div>
+                </div>
+            </div>
+            <!-- Event Card 4 -->
+            <div
+                class="group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition-all duration-500 transform hover:-translate-y-2 cursor-pointer">
+                <div class="h-56 overflow-hidden relative">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        data-alt="acoustic guitar player on a small stage at a cozy university cafe music night with warm lighting"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYmGowMUYCY5WZgqJtd2YnNXd4VQeGUJrvu3IaqV_PSnDyJPjQjS_Hw1h1ApKni1g4pqZCK6R5yZC24Q959urDr6Qg-N16c1zDzp8nOEEPZJxUcaAU6A1uNfSNlaC0eukerzfISkcz8736yqwEiN6LdPOIBMkfgcPYfibUFokj1pMc43BjmKTdGHch_XxvATKcVrrh3VBNd5utTYMshPpiFP6u2C09txkqDuPpjq7KS0S7T7FHoE24ZWDXNog-J-avv8JViTURForo" />
+                    <button
+                        class="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center text-on-surface-variant hover:bg-white transition-colors">
+                        <span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <span
+                        class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-wider rounded-lg mb-4">Music
+                        Club</span>
+                    <h3
+                        class="text-xl font-bold text-on-background mb-3 leading-tight group-hover:text-primary transition-colors line-clamp-2">
+                        Unplugged: Acoustic Night</h3>
+                    <div class="flex items-center gap-2 text-on-surface-variant text-sm font-medium">
+                        <span class="material-symbols-outlined text-lg" data-icon="calendar_today">calendar_today</span>
+                        Oct 25, 2024
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Upcoming Events Grid -->
+    <section class="bg-[#f0f7f0] py-24">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-3xl font-extrabold tracking-tight text-on-background flex items-center gap-3 mb-12">
+                This Week at GLA <span class="text-2xl">📅</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Horizontal Card 1 -->
+                <div
+                    class="flex bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-32 h-full shrink-0">
+                        <img class="w-full h-full object-cover"
+                            data-alt="calm yoga session in a university sports hall with soft natural morning light"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8SdLugQJI3fxqezqhS4jXxhunA1ay6bPgvLk3lt0Mk4dXZSEjhWgzPdr6tBoaBgiQdOjU_lG0yKbifcqksdreX6SXLKAwEwPv9c8-vzL9qfZXdcRcldP5e_I16xj2m-uMSkr930bf5vmlZL5Vv-7UvX08Z7pDa0SNLux6afdx6UVdaiMxXgZAGu0PqUcLPampRytUruXOfTCOneW7MR5vvB8WRV_HYzMlte7eWVidndKLuI4whMXFNmUfZPWJpsSfZYvo8QL_isYY" />
+                    </div>
+                    <div class="p-5 flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-on-background group-hover:text-primary transition-colors">Morning
+                                Yoga Flow</h4>
+                            <p class="text-xs text-on-surface-variant mt-1 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-xs"
+                                    data-icon="location_on">location_on</span> Main Stadium
+                            </p>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-xs font-bold text-primary">Oct 12 • 07:00 AM</span>
+                            <a class="text-xs font-bold text-primary hover:underline underline-offset-4"
+                                href="#">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Horizontal Card 2 -->
+                <div
+                    class="flex bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-32 h-full shrink-0">
+                        <img class="w-full h-full object-cover"
+                            data-alt="corporate meeting or startup pitch session in a modern glass-walled university boardroom"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKz7XviN000bVa0webFUyskzVpl0K9UYD6yIMuANvv9SqTdTLqtDb4v1HF3XIIJuIKsB9xg5qyU9FqvKZ25HhgOjGfS4t7MJ2gD_RZHkqHmksqfUnCaIlhDd3vAmMsol7JjSFop0cdVjoXjveMhonl6fa0iHjmAKMalu6tfFBpqZtTSrqZOCESJAaZX7wor5r9CzKbs4YQ_kU8-I2A0tp4-eT-Fa6t0FhojBngz8Trm2M1diTSXEJ0cQrO2EqvStblIvrUcVHkyzJM" />
+                    </div>
+                    <div class="p-5 flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-on-background group-hover:text-primary transition-colors">Startup
+                                Pitch Deck Prep</h4>
+                            <p class="text-xs text-on-surface-variant mt-1 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-xs"
+                                    data-icon="location_on">location_on</span> AB-III Auditorium
+                            </p>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-xs font-bold text-primary">Oct 13 • 03:00 PM</span>
+                            <a class="text-xs font-bold text-primary hover:underline underline-offset-4"
+                                href="#">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Horizontal Card 3 -->
+                <div
+                    class="flex bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-32 h-full shrink-0">
+                        <img class="w-full h-full object-cover"
+                            data-alt="dj table with sound mixer and colorful lighting at a college party or gathering"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZpex7t8O4b-NSDxwET-BU2kZ1fRf2jPW3vWkeUBQpYq_rL5XZG5w6zj91kjyWBk26QXAboor1URosMGxA4Tuy2Mc1mkWWYrFaZesQYP8rG0zDPlxnA_UTsUBC6xFWgZdMN32xLLfWTPw633em1PbW5PBXvGgD7X-vWx76kjE9D0LZ2t0H48c36F6hCszzJYnRXvsGb5LoQFvwHHPD6TNLhY9kBj0_KqFNIjNNtlzuRFDQxcF-qTTn3nJnOBIqNgWe8Cg-z9CpuA6t" />
+                    </div>
+                    <div class="p-5 flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-on-background group-hover:text-primary transition-colors">Neon
+                                Beats Night</h4>
+                            <p class="text-xs text-on-surface-variant mt-1 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-xs"
+                                    data-icon="location_on">location_on</span> Student Center
+                            </p>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-xs font-bold text-primary">Oct 14 • 08:00 PM</span>
+                            <a class="text-xs font-bold text-primary hover:underline underline-offset-4"
+                                href="#">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Campus Clubs Section -->
+    <section class="max-w-7xl mx-auto px-8 py-24">
+        <div class="text-center mb-16">
+            <h2
+                class="text-3xl font-extrabold tracking-tight text-on-background flex items-center justify-center gap-3">
+                Campus Clubs <span class="text-2xl">⭐</span>
+            </h2>
+            <p class="text-on-surface-variant mt-3 max-w-xl mx-auto">Find your tribe. Join one of the 50+ student-led
+                organizations at GLA.</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-12">
+            <!-- Club 1 -->
+            <div class="flex flex-col items-center group cursor-pointer">
+                <div
+                    class="w-24 h-24 bg-surface-container rounded-full flex items-center justify-center text-4xl mb-4 group-hover:scale-110 group-hover:bg-primary-container group-hover:text-white transition-all duration-300 shadow-lg">
+                    💻
+                </div>
+                <span class="font-bold text-on-background group-hover:text-primary transition-colors">Coding</span>
+            </div>
+            <!-- Club 2 -->
+            <div class="flex flex-col items-center group cursor-pointer">
+                <div
+                    class="w-24 h-24 bg-surface-container rounded-full flex items-center justify-center text-4xl mb-4 group-hover:scale-110 group-hover:bg-primary-container group-hover:text-white transition-all duration-300 shadow-lg">
+                    🎨
+                </div>
+                <span class="font-bold text-on-background group-hover:text-primary transition-colors">Fine Arts</span>
+            </div>
+            <!-- Club 3 -->
+            <div class="flex flex-col items-center group cursor-pointer">
+                <div
+                    class="w-24 h-24 bg-surface-container rounded-full flex items-center justify-center text-4xl mb-4 group-hover:scale-110 group-hover:bg-primary-container group-hover:text-white transition-all duration-300 shadow-lg">
+                    📊
+                </div>
+                <span class="font-bold text-on-background group-hover:text-primary transition-colors">Marketing</span>
+            </div>
+            <!-- Club 4 -->
+            <div class="flex flex-col items-center group cursor-pointer">
+                <div
+                    class="w-24 h-24 bg-surface-container rounded-full flex items-center justify-center text-4xl mb-4 group-hover:scale-110 group-hover:bg-primary-container group-hover:text-white transition-all duration-300 shadow-lg">
+                    🎭
+                </div>
+                <span class="font-bold text-on-background group-hover:text-primary transition-colors">Drama</span>
+            </div>
+            <!-- Club 5 -->
+            <div class="flex flex-col items-center group cursor-pointer">
+                <div
+                    class="w-24 h-24 bg-surface-container rounded-full flex items-center justify-center text-4xl mb-4 group-hover:scale-110 group-hover:bg-primary-container group-hover:text-white transition-all duration-300 shadow-lg">
+                    🏃
+                </div>
+                <span class="font-bold text-on-background group-hover:text-primary transition-colors">Athletics</span>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer
+        class="w-full px-12 py-16 grid grid-cols-1 md:grid-cols-4 gap-12 bg-slate-50 dark:bg-[#1a1c1b] border-t border-emerald-900/5">
+        <div class="md:col-span-1">
+            <div class="text-xl font-extrabold tracking-tighter text-[#0e3c12] dark:text-emerald-400 mb-6">GLA Events
+            </div>
+            <p class="font-['Inter'] text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                The central hub for all student activities, academic fests, and cultural celebrations at GLA University.
+            </p>
+        </div>
+        <div>
+            <h4 class="font-bold text-[#0e3c12] dark:text-emerald-500 mb-6 uppercase text-xs tracking-widest">Platform
+            </h4>
+            <ul class="space-y-4">
+                <li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors text-sm"
+                        href="#">About GLA</a></li>
+                <li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors text-sm"
+                        href="#">Event Guidelines</a></li>
+                <li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors text-sm"
+                        href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-bold text-[#0e3c12] dark:text-emerald-500 mb-6 uppercase text-xs tracking-widest">Support
+            </h4>
+            <ul class="space-y-4">
+                <li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors text-sm"
+                        href="#">Contact Support</a></li>
+                <li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors text-sm"
+                        href="#">Terms of Service</a></li>
+                <li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors text-sm"
+                        href="#">Campus Map</a></li>
+            </ul>
+        </div>
+        <div class="md:col-span-1 flex flex-col justify-between">
+            <div>
+                <h4 class="font-bold text-[#0e3c12] dark:text-emerald-500 mb-6 uppercase text-xs tracking-widest">
+                    Connect</h4>
+                <div class="flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center cursor-pointer hover:bg-emerald-200 transition-colors">
+                        <span class="material-symbols-outlined text-primary dark:text-emerald-400"
+                            data-icon="language">language</span>
+                    </div>
+                    <div
+                        class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center cursor-pointer hover:bg-emerald-200 transition-colors">
+                        <span class="material-symbols-outlined text-primary dark:text-emerald-400"
+                            data-icon="share">share</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xs text-slate-400 mt-8">© 2024 GLA University Events Hub. Curating campus life with
+                precision.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
