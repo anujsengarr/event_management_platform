@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>College Event Platform</title>
+    <title>EventHub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,14 +13,15 @@
     <ul>
         <li>Home</li>
         <li>Events</li>
-        <li>Contact</li>
+        <li><a href="login.html">Login</a></li>
+        <li><button onclick="toggleDark()">🌙</button></li>
     </ul>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <section class="hero">
-    <h1>College Event Management Platform</h1>
-    <p>Discover and register for all upcoming events</p>
+    <h1>College Event Platform</h1>
+    <p>Explore, Learn & Participate 🚀</p>
 </section>
 
 <!-- Search -->
@@ -31,25 +32,19 @@
 <!-- Events -->
 <section class="events" id="eventList">
 
-    <div class="card">
-        <h3>Hackathon 2026</h3>
-        <p>5 April | Seminar Hall</p>
-        <a href="event.html">View Details</a>
-    </div>
-
-    <div class="card">
-        <h3>AI Workshop</h3>
-        <p>10 April | Lab 3</p>
-        <a href="event.html">View Details</a>
-    </div>
-
-    <div class="card">
-        <h3>Cultural Fest</h3>
-        <p>20 April | Auditorium</p>
-        <a href="event.html">View Details</a>
-    </div>
+    <div class="card"><h3>Hackathon</h3><p>5 April</p><a href="event.html">View</a></div>
+    <div class="card"><h3>AI Workshop</h3><p>10 April</p><a href="event.html">View</a></div>
+    <div class="card"><h3>Cultural Fest</h3><p>20 April</p><a href="event.html">View</a></div>
+    <div class="card"><h3>Web Dev Bootcamp</h3><p>25 April</p><a href="event.html">View</a></div>
+    <div class="card"><h3>Gaming Tournament</h3><p>28 April</p><a href="event.html">View</a></div>
+    <div class="card"><h3>Startup Meetup</h3><p>30 April</p><a href="event.html">View</a></div>
 
 </section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 EventHub | Made by Group 14</p>
+</footer>
 
 <script src="script.js"></script>
 
