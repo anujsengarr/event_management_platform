@@ -1,52 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>EventHub</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>GLAU Events Platform</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<div class="sidebar">
+  <div class="sidebar-logo">🪟</div>
 
-<!-- Navbar -->
-<nav>
-    <h2>EventHub</h2>
-    <ul>
-        <li>Home</li>
-        <li>Events</li>
-        <li><a href="login.html">Login</a></li>
-        <li><button onclick="toggleDark()">🌙</button></li>
-    </ul>
-</nav>
+  <div class="sidebar-item active">
+    <span>🏠</span>
+    <p>Home</p>
+  </div>
 
-<!-- Hero -->
-<section class="hero">
-    <h1>College Event Platform</h1>
-    <p>Explore, Learn & Participate 🚀</p>
-</section>
+  <div class="sidebar-item">
+    <span>⭐</span>
+    <p>Events</p>
+  </div>
 
-<!-- Search -->
-<div class="search-box">
-    <input type="text" id="search" placeholder="Search events..." onkeyup="searchEvent()">
+  <div class="sidebar-item">
+    <span>🧑‍🏫</span>
+    <p>Clubs</p>
+  </div>
+
+  <div class="sidebar-item">
+    <span>🏆</span>
+  </div>
+
+  <div class="sidebar-item">
+    <span>📅</span>
+  </div>
+
+  <div class="sidebar-item">
+    <span>⚙️</span>
+  </div>
 </div>
+<header class="navbar">
+  <div class="logo">
+  <img src="GLALogo.png" alt="GLA University">
+  <span>GLAU Events Platform</span>
+</div>
+  <input type="text" placeholder="Search for an event..." class="search">
+  <button class="login-btn">Login</button>
+</header>
 
-<!-- Events -->
-<section class="events" id="eventList">
+<section class="hero">
+  <h1><span>GLAU Events Platform</span></h1>
 
-    <div class="card"><h3>Hackathon</h3><p>5 April</p><a href="event.html">View</a></div>
-    <div class="card"><h3>AI Workshop</h3><p>10 April</p><a href="event.html">View</a></div>
-    <div class="card"><h3>Cultural Fest</h3><p>20 April</p><a href="event.html">View</a></div>
-    <div class="card"><h3>Web Dev Bootcamp</h3><p>25 April</p><a href="event.html">View</a></div>
-    <div class="card"><h3>Gaming Tournament</h3><p>28 April</p><a href="event.html">View</a></div>
-    <div class="card"><h3>Startup Meetup</h3><p>30 April</p><a href="event.html">View</a></div>
+  <div class="categories">
+    <div class="cat">Workshops</div>
+    <div class="cat">Technical Events</div>
+    <div class="cat">Cultural Events</div>
+    <div class="cat">Guest Lectures</div>
+  </div>
+</section>
+
+<section class="featured">
+  <h2>Featured</h2>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="spandan.jpg">
+      <h3>Spandan</h3>
+      <p>GLAU Annual Cultural Fest</p>
+    </div>
+
+    <div class="card">
+      <img src="Codepunk.png">
+      <h3>CodePunk 2.0</h3>
+      <p>Where deep thinking meets bold innovation</p>
+    </div>
+
+    <div class="card">
+      <img src="e-cell.png">
+      <h3>E-Summit</h3>
+      <p>Flagship entrepreneurship event</p>
+    </div>
+  </div>
 
 </section>
 
-<!-- Footer -->
-<footer>
-    <p>© 2026 EventHub | Made by Group 14</p>
-</footer>
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h3>GLAU Events Platform</h3>
+      <p>Built with ❤️ for students</p>
+    </div>
 
-<script src="script.js"></script>
+    <div>
+      <h4>Contact</h4>
+      <p>Email: glauevents@gmail.com</p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
