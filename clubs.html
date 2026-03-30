@@ -7,7 +7,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -81,22 +80,35 @@
     </style>
 </head>
 <body class="bg-background font-body text-on-background antialiased">
-<!-- TopNavBar (Immutable Content & Mandatory Styling from JSON) -->
+<!-- TopNavBar -->
 <header class="fixed top-0 w-full z-50 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md shadow-sm shadow-green-900/5">
-<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<nav class="grid grid-cols-3 items-center px-8 py-4 max-w-7xl mx-auto">
+<!-- Logo and Shield -->
+<div class="flex items-center gap-3 justify-self-start">
+<div class="w-10 h-10 flex items-center justify-center">
+<!-- SVG representation of a green and gold university shield -->
+<svg class="w-full h-full drop-shadow-sm" viewbox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+<path d="M50 0 L90 20 L90 60 C90 85 70 110 50 120 C30 110 10 85 10 60 L10 20 Z" fill="#0e3c12"></path>
+<path d="M50 10 L82 26 L82 60 C82 81 65 102 50 110 C35 102 18 81 18 60 L18 26 Z" fill="#FFD700" opacity="0.9"></path>
+<text fill="#0e3c12" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle" x="50" y="75">GLA</text>
+</svg>
+</div>
 <div class="text-xl font-extrabold text-green-900 dark:text-green-50 font-['Plus_Jakarta_Sans'] tracking-tight">
                 GLA Events
             </div>
-<div class="hidden md:flex items-center space-x-8 font-['Plus_Jakarta_Sans'] font-bold tracking-tight">
+</div>
+<!-- Centralized Navigation Links -->
+<div class="hidden md:flex items-center justify-center space-x-8 font-['Plus_Jakarta_Sans'] font-bold tracking-tight"><a class="text-zinc-600 dark:text-zinc-400 hover:text-green-700 transition-colors" href="#">Dashboard</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-green-700 transition-colors" href="#">Discover</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-green-700 transition-colors" href="#">Calendar</a>
 <a class="text-green-700 dark:text-green-400 border-b-2 border-green-700 font-bold pb-1" href="#">Clubs</a>
 <a class="text-zinc-600 dark:text-zinc-400 hover:text-green-700 transition-colors" href="#">Venues</a>
 </div>
-<div class="flex items-center gap-4">
+<!-- Sign In Button -->
+<div class="flex items-center gap-4 justify-self-end">
 <button class="text-zinc-600 dark:text-zinc-400 font-bold hover:bg-green-50/50 dark:hover:bg-green-900/20 px-4 py-2 rounded-lg transition-all scale-95 active:scale-90">
-                    Sign In
-                </button>
+                Sign In
+            </button>
 </div>
 </nav>
 </header>
@@ -105,11 +117,11 @@
 <section class="bg-surface-container-low pt-24 pb-20 px-6">
 <div class="max-w-4xl mx-auto text-center">
 <h1 class="font-headline text-5xl md:text-6xl font-extrabold text-on-primary-fixed-variant tracking-tight mb-6">
-                    Campus Clubs
-                </h1>
+                Campus Clubs
+            </h1>
 <p class="font-body text-lg md:text-xl text-on-tertiary-fixed-variant max-w-2xl mx-auto mb-12">
-                    Discover the communities shaping campus culture. Find your niche, grow your skills, and make lifelong connections.
-                </p>
+                Discover the communities shaping campus culture. Find your niche, grow your skills, and make lifelong connections.
+            </p>
 <!-- Search Bar -->
 <div class="relative max-w-xl mx-auto group">
 <div class="absolute inset-y-0 left-5 flex items-center pointer-events-none">
@@ -126,84 +138,84 @@
 <!-- Club Card 1: CodeCraft -->
 <div class="group bg-surface-container-lowest rounded-2xl p-8 shadow-sm hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden flex flex-col">
 <div class="w-20 h-20 rounded-full bg-blue-100/50 flex items-center justify-center text-4xl mb-8 mx-auto transform group-hover:scale-110 transition-transform">
-                            💻
-                        </div>
+                        💻
+                    </div>
 <h3 class="font-headline text-2xl font-bold text-on-surface mb-3 text-center">CodeCraft Club</h3>
 <p class="text-on-tertiary-fixed-variant text-center mb-8 line-clamp-2">Exploring the frontiers of software engineering, competitive programming, and open-source development.</p>
 <div class="mt-auto pt-6 border-t border-outline-variant/30 flex justify-between items-center">
 <span class="text-secondary font-bold text-sm">18 Events</span>
 <a class="text-primary font-bold hover:translate-x-1 transition-transform inline-flex items-center gap-1" href="#">
-                                Explore <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                            Explore <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </div>
 </div>
 <!-- Club Card 2: Artistry -->
 <div class="group bg-surface-container-lowest rounded-2xl p-8 shadow-sm hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden flex flex-col">
 <div class="w-20 h-20 rounded-full bg-pink-100/50 flex items-center justify-center text-4xl mb-8 mx-auto transform group-hover:scale-110 transition-transform">
-                            🎨
-                        </div>
+                        🎨
+                    </div>
 <h3 class="font-headline text-2xl font-bold text-on-surface mb-3 text-center">Artistry</h3>
 <p class="text-on-tertiary-fixed-variant text-center mb-8 line-clamp-2">A haven for visual artists to collaborate on murals, exhibitions, and experimental digital media projects.</p>
 <div class="mt-auto pt-6 border-t border-outline-variant/30 flex justify-between items-center">
 <span class="text-secondary font-bold text-sm">12 Events</span>
 <a class="text-primary font-bold hover:translate-x-1 transition-transform inline-flex items-center gap-1" href="#">
-                                Explore <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                            Explore <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </div>
 </div>
 <!-- Club Card 3: BizTech -->
 <div class="group bg-surface-container-lowest rounded-2xl p-8 shadow-sm hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden flex flex-col">
 <div class="w-20 h-20 rounded-full bg-orange-100/50 flex items-center justify-center text-4xl mb-8 mx-auto transform group-hover:scale-110 transition-transform">
-                            📊
-                        </div>
+                        📊
+                    </div>
 <h3 class="font-headline text-2xl font-bold text-on-surface mb-3 text-center">BizTech</h3>
 <p class="text-on-tertiary-fixed-variant text-center mb-8 line-clamp-2">Where business strategy meets technological innovation. Prepare for the future of global enterprise.</p>
 <div class="mt-auto pt-6 border-t border-outline-variant/30 flex justify-between items-center">
 <span class="text-secondary font-bold text-sm">24 Events</span>
 <a class="text-primary font-bold hover:translate-x-1 transition-transform inline-flex items-center gap-1" href="#">
-                                Explore <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                            Explore <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </div>
 </div>
 <!-- Club Card 4: Drama Society -->
 <div class="group bg-surface-container-lowest rounded-2xl p-8 shadow-sm hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden flex flex-col">
 <div class="w-20 h-20 rounded-full bg-purple-100/50 flex items-center justify-center text-4xl mb-8 mx-auto transform group-hover:scale-110 transition-transform">
-                            🎭
-                        </div>
+                        🎭
+                    </div>
 <h3 class="font-headline text-2xl font-bold text-on-surface mb-3 text-center">Drama Society</h3>
 <p class="text-on-tertiary-fixed-variant text-center mb-8 line-clamp-2">Bringing stories to life through performance, stage design, and classical theatrical productions.</p>
 <div class="mt-auto pt-6 border-t border-outline-variant/30 flex justify-between items-center">
 <span class="text-secondary font-bold text-sm">9 Events</span>
 <a class="text-primary font-bold hover:translate-x-1 transition-transform inline-flex items-center gap-1" href="#">
-                                Explore <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                            Explore <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </div>
 </div>
 <!-- Club Card 5: FitGLA -->
 <div class="group bg-surface-container-lowest rounded-2xl p-8 shadow-sm hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden flex flex-col">
 <div class="w-20 h-20 rounded-full bg-green-100/50 flex items-center justify-center text-4xl mb-8 mx-auto transform group-hover:scale-110 transition-transform">
-                            🏃
-                        </div>
+                        🏃
+                    </div>
 <h3 class="font-headline text-2xl font-bold text-on-surface mb-3 text-center">FitGLA</h3>
 <p class="text-on-tertiary-fixed-variant text-center mb-8 line-clamp-2">Promoting health and wellness through group runs, specialized workouts, and nutritional seminars.</p>
 <div class="mt-auto pt-6 border-t border-outline-variant/30 flex justify-between items-center">
 <span class="text-secondary font-bold text-sm">31 Events</span>
 <a class="text-primary font-bold hover:translate-x-1 transition-transform inline-flex items-center gap-1" href="#">
-                                Explore <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                            Explore <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </div>
 </div>
 <!-- Club Card 6: Melody Club -->
 <div class="group bg-surface-container-lowest rounded-2xl p-8 shadow-sm hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden flex flex-col">
 <div class="w-20 h-20 rounded-full bg-yellow-100/50 flex items-center justify-center text-4xl mb-8 mx-auto transform group-hover:scale-110 transition-transform">
-                            🎵
-                        </div>
+                        🎵
+                    </div>
 <h3 class="font-headline text-2xl font-bold text-on-surface mb-3 text-center">Melody Club</h3>
 <p class="text-on-tertiary-fixed-variant text-center mb-8 line-clamp-2">A collective of musicians and enthusiasts dedicated to sharing sounds, rhythm, and vocal harmony.</p>
 <div class="mt-auto pt-6 border-t border-outline-variant/30 flex justify-between items-center">
 <span class="text-secondary font-bold text-sm">15 Events</span>
 <a class="text-primary font-bold hover:translate-x-1 transition-transform inline-flex items-center gap-1" href="#">
-                                Explore <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                            Explore <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </div>
 </div>
@@ -217,17 +229,17 @@
 <h2 class="font-headline text-4xl font-extrabold text-on-primary-container mb-6 relative z-10">Start Your Own Community</h2>
 <p class="text-on-primary-container/80 text-lg mb-10 max-w-xl mx-auto relative z-10">Don't see a club that fits your passion? We'll help you build it from the ground up.</p>
 <button class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold hover:bg-on-primary-fixed-variant transition-all relative z-10 shadow-lg shadow-primary/20">
-                    Register a Club
-                </button>
+                Register a Club
+            </button>
 </div>
 </section>
 </main>
-<!-- Footer (Immutable Content & Mandatory Styling from JSON) -->
+<!-- Footer -->
 <footer class="w-full pt-16 pb-8 bg-green-900 dark:bg-zinc-950 font-['Manrope'] text-sm">
 <div class="flex flex-col items-center space-y-8 px-6">
 <div class="text-white font-bold tracking-widest uppercase text-lg">
-                GLA Events Platform
-            </div>
+            GLA Events Platform
+        </div>
 <div class="flex flex-wrap justify-center gap-8">
 <a class="text-green-100/70 hover:text-emerald-300 transition-colors opacity-80 hover:opacity-100" href="#">About Us</a>
 <a class="text-green-100/70 hover:text-emerald-300 transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
@@ -236,8 +248,8 @@
 </div>
 <div class="w-24 h-px bg-emerald-400/20"></div>
 <div class="text-green-100/50 text-center">
-                © 2024 GLA Events Platform. Cultivating Campus Culture.
-            </div>
+            © 2024 GLA Events Platform. Cultivating Campus Culture.
+        </div>
 </div>
 </footer>
 </body></html>
