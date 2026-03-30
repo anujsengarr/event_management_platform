@@ -3,7 +3,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Clubs | GLA Events Platform</title>
+<title>Clubs | GLAU Events Platform</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -77,40 +77,39 @@
       }
       .no-scrollbar::-webkit-scrollbar { display: none; }
       .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      /* Navbar hover effect: subtle lift and smooth color change */
+      nav a {
+        transition: color .18s ease, transform .18s ease;
+        will-change: transform, color;
+      }
+      nav a:hover { transform: translateY(-3px); }
     </style>
 </head>
 <body class="bg-background font-body text-on-background antialiased">
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md shadow-sm shadow-green-900/5">
-<nav class="grid grid-cols-3 items-center px-8 py-4 max-w-7xl mx-auto">
-<!-- Logo and Shield -->
-<div class="flex items-center gap-3 justify-self-start">
-<div class="w-10 h-10 flex items-center justify-center">
-<!-- SVG representation of a green and gold university shield -->
-<svg class="w-full h-full drop-shadow-sm" viewbox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
-<path d="M50 0 L90 20 L90 60 C90 85 70 110 50 120 C30 110 10 85 10 60 L10 20 Z" fill="#0e3c12"></path>
-<path d="M50 10 L82 26 L82 60 C82 81 65 102 50 110 C35 102 18 81 18 60 L18 26 Z" fill="#FFD700" opacity="0.9"></path>
-<text fill="#0e3c12" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle" x="50" y="75">GLA</text>
-</svg>
-</div>
-<div class="text-xl font-extrabold text-green-900 dark:text-green-50 font-['Plus_Jakarta_Sans'] tracking-tight">
-                GLA Events
-            </div>
-</div>
-<!-- Centralized Navigation Links -->
-<div class="hidden md:flex items-center justify-center space-x-8 font-['Plus_Jakarta_Sans'] font-bold tracking-tight"><a class="text-zinc-600 dark:text-zinc-400 hover:text-green-700 transition-colors" href="#">Dashboard</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-green-700 transition-colors" href="#">Discover</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-green-700 transition-colors" href="#">Calendar</a>
-<a class="text-green-700 dark:text-green-400 border-b-2 border-green-700 font-bold pb-1" href="#">Clubs</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-green-700 transition-colors" href="#">Venues</a>
-</div>
-<!-- Sign In Button -->
-<div class="flex items-center gap-4 justify-self-end">
-<button class="text-zinc-600 dark:text-zinc-400 font-bold hover:bg-green-50/50 dark:hover:bg-green-900/20 px-4 py-2 rounded-lg transition-all scale-95 active:scale-90">
-                Sign In
-            </button>
-</div>
-</nav>
+<!-- Top Navigation Bar (copied from homepage/calendar) -->
+<header class="bg-white/80 dark:bg-emerald-950/80 backdrop-blur-xl docked full-width top-0 z-50 sticky">
+  <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+    <div class="text-2xl font-bold tracking-tighter text-emerald-900 dark:text-emerald-50 font-headline">
+      <div class="flex items-center gap-3">
+        <img alt="GLA University Shield" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD3_Or2ObFQcHh2Ljll8G5YSb_rBGZ4CzMVToB4LJEkkclRUYTqQjgsXe2gH86HQtZVg1_un844EI1ecYYturcZPUOfEIIuwIe-MZm0IM7o3_D86XGSThJg4aEgZdFSJFMc6l__f-KYXcud76Qb4DvE0h1pIDmAasPDn9oRKcB1bPYQLN0Ri6mZefhVm-4AeSxUYPFCBOOiuqN6PYrlwkegZfjvgnGlkXU5AgU_d5Di40G6QKSDcEDc2fDnpiMBoGdkazwN7CZWivn" />
+        <span>GLAU Events</span>
+      </div>
+    </div>
+    <nav class="hidden md:flex items-center space-x-8 font-manrope font-semibold tracking-tight">
+      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 transition-transform duration-200" href="#">Dashboard</a>
+      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 transition-transform duration-200" href="#">Discover</a>
+      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 transition-transform duration-200" href="#">Calendar</a>
+      <a class="text-emerald-900 dark:text-emerald-50 border-b-2 border-emerald-900 pb-1 font-semibold" href="#">Clubs</a>
+      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 transition-transform duration-200" href="#">Venues</a>
+    </nav>
+    <div class="flex items-center space-x-4">
+      <button class="material-symbols-outlined text-emerald-900 dark:text-emerald-100 p-2" data-icon="search">search</button>
+      <div class="hidden sm:flex items-center space-x-3">
+        <button class="px-5 py-2 text-emerald-900 dark:text-emerald-100 font-semibold hover:scale-105 transition-all">Login</button>
+        <button class="px-5 py-2 bg-primary text-on-primary rounded-full font-semibold hover:scale-105 transition-all shadow-sm">Sign Up</button>
+      </div>
+    </div>
+  </div>
 </header>
 <main class="pt-16">
 <!-- Header Section: The Academic Arboretum Style -->
@@ -234,22 +233,21 @@
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="w-full pt-16 pb-8 bg-green-900 dark:bg-zinc-950 font-['Manrope'] text-sm">
-<div class="flex flex-col items-center space-y-8 px-6">
-<div class="text-white font-bold tracking-widest uppercase text-lg">
-            GLA Events Platform
-        </div>
-<div class="flex flex-wrap justify-center gap-8">
-<a class="text-green-100/70 hover:text-emerald-300 transition-colors opacity-80 hover:opacity-100" href="#">About Us</a>
-<a class="text-green-100/70 hover:text-emerald-300 transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
-<a class="text-green-100/70 hover:text-emerald-300 transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
-<a class="text-green-100/70 hover:text-emerald-300 transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<footer class="bg-[#0e3c12] dark:bg-emerald-950 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-screen-2xl mx-auto">
+<div class="mb-8 md:mb-0">
+<span class="text-xl font-bold text-white">GLAU Events</span>
+<p class="text-emerald-200/60 font-['Plus_Jakarta_Sans'] text-sm mt-2 max-w-xs">Curating the finest campus experiences for the next generation of leaders.</p>
 </div>
-<div class="w-24 h-px bg-emerald-400/20"></div>
-<div class="text-green-100/50 text-center">
-            © 2024 GLA Events Platform. Cultivating Campus Culture.
-        </div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12 text-emerald-200/60 font-['Plus_Jakarta_Sans'] text-sm">
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Privacy Policy</a>
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Terms of Service</a>
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Contact Us</a>
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Support</a>
+</div>
+<div class="mt-8 md:mt-0 text-emerald-200/40 font-['Plus_Jakarta_Sans'] text-xs">
+                © 2024 GLA Events Platform. All rights reserved.
+            </div>
 </div>
 </footer>
 </body></html>

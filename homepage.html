@@ -3,10 +3,9 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Explore Events | GLA Events</title>
+<title>Discover</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
@@ -63,9 +62,9 @@
               "primary-fixed": "#bcf0b4"
             },
             fontFamily: {
-              "headline": ["Manrope", "sans-serif"],
-              "body": ["Inter", "sans-serif"],
-              "label": ["Inter", "sans-serif"]
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
             },
             borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
           },
@@ -76,11 +75,16 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             display: inline-block;
-            line-height: 1;
         }
         .editorial-shadow {
             box-shadow: 0 20px 40px rgba(14, 60, 18, 0.06);
         }
+      /* Navbar hover effect: subtle lift and smooth color change */
+      nav a {
+        transition: color .18s ease, transform .18s ease;
+        will-change: transform, color;
+      }
+      nav a:hover { transform: translateY(-3px); }
     </style>
 </head>
 <body class="bg-background font-body text-on-surface antialiased">
@@ -89,7 +93,7 @@
 <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
 <div class="text-2xl font-bold tracking-tighter text-emerald-900 dark:text-emerald-50 font-headline"><div class="flex items-center gap-3">
 <img alt="GLA University Shield" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD3_Or2ObFQcHh2Ljll8G5YSb_rBGZ4CzMVToB4LJEkkclRUYTqQjgsXe2gH86HQtZVg1_un844EI1ecYYturcZPUOfEIIuwIe-MZm0IM7o3_D86XGSThJg4aEgZdFSJFMc6l__f-KYXcud76Qb4DvE0h1pIDmAasPDn9oRKcB1bPYQLN0Ri6mZefhVm-4AeSxUYPFCBOOiuqN6PYrlwkegZfjvgnGlkXU5AgU_d5Di40G6QKSDcEDc2fDnpiMBoGdkazwN7CZWivn"/>
-<span>GLA Events</span>
+<span>GLAU Events</span>
 </div></div>
 <nav class="hidden md:flex items-center space-x-8 font-manrope font-semibold tracking-tight">
 <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 hover:scale-105 transition-transform duration-200 ease-out" href="#">Dashboard</a><a class="hover:scale-105 transition-transform duration-200 ease-out dark:text-emerald-50 hover:text-emerald-800 border-b-2 border-emerald-900 dark:border-emerald-50 pb-1 text-emerald-900 font-semibold" href="#">Discover</a>
@@ -322,28 +326,21 @@
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-emerald-900 dark:bg-emerald-950 text-white full-width bottom-0 tonal-shift flat">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 w-full max-w-screen-2xl mx-auto">
-<div>
-<div class="text-xl font-manrope font-bold text-white mb-4">GLA Events</div>
-<p class="text-emerald-100/80 max-w-md font-inter text-sm tracking-normal">
-                    The official destination for all campus activities, workshops, and student festivals. Stay connected, stay inspired.
-                </p>
+<footer class="bg-[#0e3c12] dark:bg-emerald-950 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-screen-2xl mx-auto">
+<div class="mb-8 md:mb-0">
+<span class="text-xl font-bold text-white">GLAU Events</span>
+<p class="text-emerald-200/60 font-['Plus_Jakarta_Sans'] text-sm mt-2 max-w-xs">Curating the finest campus experiences for the next generation of leaders.</p>
 </div>
-<div class="grid grid-cols-2 gap-4">
-<div class="flex flex-col space-y-3">
-<a class="text-emerald-100/80 hover:text-white transition-colors opacity-80 hover:opacity-100 font-inter text-sm" href="#">About GLA</a>
-<a class="text-emerald-100/80 hover:text-white transition-colors opacity-80 hover:opacity-100 font-inter text-sm" href="#">Event Guidelines</a>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12 text-emerald-200/60 font-['Plus_Jakarta_Sans'] text-sm">
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Privacy Policy</a>
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Terms of Service</a>
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Contact Us</a>
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Support</a>
 </div>
-<div class="flex flex-col space-y-3">
-<a class="text-emerald-100/80 hover:text-white transition-colors opacity-80 hover:opacity-100 font-inter text-sm" href="#">Privacy Policy</a>
-<a class="text-emerald-100/80 hover:text-white transition-colors opacity-80 hover:opacity-100 font-inter text-sm" href="#">Contact Support</a>
-</div>
-</div>
-</div>
-<div class="px-12 py-8 border-t border-white/10 text-center max-w-screen-2xl mx-auto">
-<p class="text-emerald-100/60 font-inter text-sm tracking-normal">© 2024 GLA Events. All rights reserved.</p>
+<div class="mt-8 md:mt-0 text-emerald-200/40 font-['Plus_Jakarta_Sans'] text-xs">
+                © 2024 GLA Events Platform. All rights reserved.
+            </div>
 </div>
 </footer>
 </body></html>

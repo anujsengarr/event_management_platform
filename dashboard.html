@@ -5,8 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>GLA Events Platform - Dashboard</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -63,9 +62,9 @@
                 "tertiary": "#735c00"
               },
               fontFamily: {
-                "headline": ["Manrope", "sans-serif"],
-                "body": ["Inter", "sans-serif"],
-                "label": ["Inter", "sans-serif"]
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
               },
               borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px"},
             },
@@ -82,33 +81,39 @@
         .bg-banner-gradient {
             background: linear-gradient(135deg, #275427 0%, #3d7a3d 100%);
         }
+      /* Navbar hover effect: subtle lift and smooth color change */
+      nav a {
+        transition: color .18s ease, transform .18s ease;
+        will-change: transform, color;
+      }
+      nav a:hover { transform: translateY(-3px); }
     </style>
 </head>
 <body class="bg-background font-body text-on-surface">
-<!-- Top Navigation Bar -->
-<header class="sticky top-0 z-50 flex justify-between items-center w-full px-8 py-4 max-w-full bg-[#f8faf8] dark:bg-slate-900 backdrop-blur-md opacity-80 border-b border-[#0e3c12]/10">
-<div class="flex items-center gap-3 text-xl font-bold text-[#0e3c12] dark:text-[#95c78e] font-headline tracking-tight">
-<!-- GLAU Shield Placeholder -->
-<div class="w-9 h-9 bg-primary rounded-lg flex items-center justify-center text-tertiary-fixed font-bold text-lg border-2 border-tertiary-fixed/30 shadow-sm" title="GLA Shield">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield</span>
-</div>
-<span>GLA Events</span>
-</div>
-<nav class="hidden md:flex items-center gap-8 font-manrope font-semibold tracking-tight">
-<a class="text-[#0e3c12] dark:text-[#95c78e] border-b-2 border-[#006c49] pb-1 font-bold transition-all" href="#">Dashboard</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-[#0e3c12] transition-colors" href="#">Events</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-[#0e3c12] transition-colors" href="#">Schedules</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-[#0e3c12] transition-colors" href="#">Venues</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-[#0e3c12] transition-colors" href="#">Analytics</a>
-</nav>
-<div class="flex items-center gap-4">
-<button class="p-2 text-slate-600 hover:bg-[#275427]/5 rounded-lg transition-all">
-<span class="material-symbols-outlined">notifications</span>
-</button>
-<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-bold text-sm">
-                AK
-            </div>
-</div>
+<!-- Top Navigation Bar (copied from Discover/homepage) -->
+<header class="bg-white/80 dark:bg-emerald-950/80 backdrop-blur-xl docked full-width top-0 z-50 no-border bg-surface-container-low flat no shadows sticky top-0">
+  <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+    <div class="text-2xl font-bold tracking-tighter text-emerald-900 dark:text-emerald-50 font-headline">
+      <div class="flex items-center gap-3">
+        <img alt="GLA University Shield" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD3_Or2ObFQcHh2Ljll8G5YSb_rBGZ4CzMVToB4LJEkkclRUYTqQjgsXe2gH86HQtZVg1_un844EI1ecYYturcZPUOfEIIuwIe-MZm0IM7o3_D86XGSThJg4aEgZdFSJFMc6l__f-KYXcud76Qb4DvE0h1pIDmAasPDn9oRKcB1bPYQLN0Ri6mZefhVm-4AeSxUYPFCBOOiuqN6PYrlwkegZfjvgnGlkXU5AgU_d5Di40G6QKSDcEDc2fDnpiMBoGdkazwN7CZWivn" />
+        <span>GLAU Events</span>
+      </div>
+    </div>
+    <nav class="hidden md:flex items-center space-x-8 font-manrope font-semibold tracking-tight">
+      <a class="text-emerald-900 dark:text-emerald-50 border-b-2 border-emerald-900 pb-1 font-semibold" href="#">Dashboard</a>
+      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 hover:scale-105 transition-transform duration-200 ease-out" href="#">Discover</a>
+      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 hover:scale-105 transition-transform duration-200 ease-out" href="#">Calendar</a>
+      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 hover:scale-105 transition-transform duration-200 ease-out" href="#">Clubs</a>
+      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 hover:scale-105 transition-transform duration-200 ease-out" href="#">Venues</a>
+    </nav>
+    <div class="flex items-center space-x-4">
+      <button class="material-symbols-outlined text-emerald-900 dark:text-emerald-100 p-2" data-icon="search">search</button>
+      <div class="hidden sm:flex items-center space-x-3">
+        <button class="px-5 py-2 text-emerald-900 dark:text-emerald-100 font-semibold hover:scale-105 transition-all">Login</button>
+        <button class="px-5 py-2 bg-primary text-on-primary rounded-full font-semibold hover:scale-105 transition-all shadow-sm">Sign Up</button>
+      </div>
+    </div>
+  </div>
 </header>
 <main class="max-w-7xl mx-auto px-6 py-8">
 <!-- Welcome Banner -->
@@ -346,18 +351,20 @@
 </aside>
 </div>
 </main>
-<!-- Footer -->
-<footer class="mt-20 bg-[#275427] dark:bg-[#0e3c12] text-white py-12 px-8 full-width">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center w-full gap-6">
-<div class="text-white font-manrope font-bold text-xl">GLA Events</div>
-<nav class="flex flex-wrap justify-center gap-8 font-inter text-sm tracking-wide uppercase">
-<a class="text-white/80 hover:text-white transition-opacity" href="#">Privacy Policy</a>
-<a class="text-white/80 hover:text-white transition-opacity" href="#">Terms of Service</a>
-<a class="text-white/80 hover:text-white transition-opacity" href="#">Contact Support</a>
-<a class="text-white/80 hover:text-white transition-opacity" href="#">Campus Map</a>
-</nav>
-<div class="text-white/60 font-inter text-sm">
-                © 2024 GLA Events. All rights reserved.
+<footer class="bg-[#0e3c12] dark:bg-emerald-950 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-screen-2xl mx-auto">
+<div class="mb-8 md:mb-0">
+<span class="text-xl font-bold text-white">GLAU Events</span>
+<p class="text-emerald-200/60 font-['Plus_Jakarta_Sans'] text-sm mt-2 max-w-xs">Curating the finest campus experiences for the next generation of leaders.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12 text-emerald-200/60 font-['Plus_Jakarta_Sans'] text-sm">
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Privacy Policy</a>
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Terms of Service</a>
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Contact Us</a>
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Support</a>
+</div>
+<div class="mt-8 md:mt-0 text-emerald-200/40 font-['Plus_Jakarta_Sans'] text-xs">
+                © 2024 GLA Events Platform. All rights reserved.
             </div>
 </div>
 </footer>
