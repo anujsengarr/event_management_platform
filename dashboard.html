@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GLA Events Platform | Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#e6e9e7",
+              "on-error-container": "#93000a",
+              "on-tertiary-container": "#89ca84",
+              "on-secondary-fixed-variant": "#005236",
+              "on-tertiary-fixed-variant": "#13521a",
+              "secondary-fixed-dim": "#4edea3",
+              "secondary-fixed": "#6ffbbe",
+              "surface-bright": "#f8faf8",
+              "outline": "#72796e",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#002204",
+              "on-secondary": "#ffffff",
+              "secondary-container": "#6cf8bb",
+              "surface-variant": "#e1e3e1",
+              "inverse-on-surface": "#eff1ef",
+              "surface-container-highest": "#e1e3e1",
+              "on-primary-fixed-variant": "#235024",
+              "surface-tint": "#3b6939",
+              "on-secondary-fixed": "#002113",
+              "inverse-surface": "#2e3130",
+              "on-surface-variant": "#42493f",
+              "on-surface": "#191c1b",
+              "primary-container": "#275427",
+              "tertiary-container": "#18561e",
+              "on-secondary-container": "#00714d",
+              "on-tertiary": "#ffffff",
+              "background": "#f8faf8",
+              "on-primary-container": "#95c78e",
+              "primary-fixed": "#bcf0b4",
+              "tertiary-fixed-dim": "#95d68f",
+              "primary-fixed-dim": "#a1d39a",
+              "surface-container-low": "#f2f4f2",
+              "primary": "#0e3c12",
+              "tertiary": "#003e0c",
+              "on-error": "#ffffff",
+              "error": "#ba1a1a",
+              "on-primary-fixed": "#002204",
+              "outline-variant": "#c2c9bc",
+              "error-container": "#ffdad6",
+              "surface": "#f8faf8",
+              "tertiary-fixed": "#b0f3a9",
+              "surface-container": "#eceeec",
+              "on-background": "#191c1b",
+              "surface-dim": "#d8dad9",
+              "secondary": "#006c49",
+              "inverse-primary": "#a1d39a"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-line { border: none !important; }
+        .tonal-shift-bottom { box-shadow: 0 4px 20px -10px rgba(14, 60, 18, 0.05); }
+        .tonal-shift-top { box-shadow: 0 -4px 20px -10px rgba(14, 60, 18, 0.05); }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-stone-950/80 backdrop-blur-md no-line tonal-shift-bottom font-['Manrope'] antialiased tracking-tight">
+<div class="flex justify-between items-center max-w-[1400px] mx-auto px-8 h-16">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold text-[#275427] dark:text-[#6cf8bb] tracking-tighter">GLA Events</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-[#275427] dark:text-[#6cf8bb] font-semibold border-b-2 border-[#275427] dark:border-[#6cf8bb] pb-1" href="#">Dashboard</a>
+<a class="text-slate-500 dark:text-stone-400 hover:text-[#275427] dark:hover:text-[#6cf8bb] transition-colors" href="#">Events</a>
+<a class="text-slate-500 dark:text-stone-400 hover:text-[#275427] dark:hover:text-[#6cf8bb] transition-colors" href="#">Schedules</a>
+<a class="text-slate-500 dark:text-stone-400 hover:text-[#275427] dark:hover:text-[#6cf8bb] transition-colors" href="#">Venues</a>
+<a class="text-slate-500 dark:text-stone-400 hover:text-[#275427] dark:hover:text-[#6cf8bb] transition-colors" href="#">Analytics</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-5 py-2 text-sm font-medium text-on-surface-variant hover:opacity-80 transition-all duration-200">Sign In</button>
+<button class="px-5 py-2 text-sm font-semibold bg-gradient-to-br from-primary-container to-primary text-white rounded-xl hover:opacity-90 active:scale-[0.98] transition-all">Create Event</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1400px] mx-auto px-8 py-8 space-y-8">
+<!-- Header Banner -->
+<section class="w-full bg-gradient-to-r from-[#275427] to-[#3d7a3d] rounded-2xl p-6 flex justify-between items-center shadow-lg overflow-hidden relative">
+<div class="relative z-10">
+<h1 class="text-2xl font-bold text-white tracking-tight font-headline">Welcome back, Arjun! 👋</h1>
+<p class="text-secondary-fixed text-sm font-medium">Your personalized event hub</p>
+</div>
+<div class="h-12 w-12 rounded-full bg-white flex items-center justify-center text-[#275427] font-bold text-lg shadow-sm border-2 border-white/20 z-10">
+                AK
+            </div>
+<!-- Decorative circle -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/5 rounded-full blur-2xl"></div>
+</section>
+<!-- Stats Cards Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex items-center gap-5 transition-transform hover:scale-[1.01]">
+<div class="w-12 h-12 rounded-xl bg-[#e8f5e9] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#2e7d32]" data-icon="confirmation_number">confirmation_number</span>
+</div>
+<div>
+<div class="text-3xl font-extrabold text-on-surface font-headline leading-none">3</div>
+<div class="text-sm font-medium text-on-surface-variant mt-1">Registered Events</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex items-center gap-5 transition-transform hover:scale-[1.01]">
+<div class="w-12 h-12 rounded-xl bg-[#ffebee] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#c62828]" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div>
+<div class="text-3xl font-extrabold text-on-surface font-headline leading-none">5</div>
+<div class="text-sm font-medium text-on-surface-variant mt-1">Saved Events</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex items-center gap-5 transition-transform hover:scale-[1.01]">
+<div class="w-12 h-12 rounded-xl bg-[#e3f2fd] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#1565c0]" data-icon="calendar_month">calendar_month</span>
+</div>
+<div>
+<div class="text-3xl font-extrabold text-on-surface font-headline leading-none">2</div>
+<div class="text-sm font-medium text-on-surface-variant mt-1">This Week</div>
+</div>
+</div>
+</section>
+<!-- Main Content Area -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Events Lists Column -->
+<div class="lg:col-span-8 space-y-12">
+<!-- Registered Events -->
+<section>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<h2 class="text-xl font-bold font-headline tracking-tight text-on-surface">Registered Events</h2>
+</div>
+<div class="space-y-4">
+<!-- Event Card 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-center gap-4 transition-all hover:shadow-md">
+<img class="w-16 h-16 rounded-lg object-cover" data-alt="Modern tech conference stage with neon lights and a professional speaker presenting to a large diverse audience" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7hZxOvKtBBMEAeBuY-yUnleSj3aMh5Clvp854KLtS1xvOoaymchy3HXDM3psFkPNJxL585wFL-iGVMowDDvk9JV70SSCzRsCJ-NsrhrQ3BsIA051linrHDIHmm0yWtEzNi0sJJ3fBbEu9uYVPc2D5LsKrixW5anK7TXQ5g8qj6FZ6sYvu6cb3wfhBZ-Sjk9rjqwIKxiskmBp6IprASqal0MC2837mT3HuaCplmAgHgVO8nvSqajazK2TaK_YXw1ZdiFFC9OvZaCo-"/>
+<div class="flex-1">
+<h3 class="font-bold text-on-surface leading-tight">Global AI Summit 2024</h3>
+<p class="text-xs text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span> Oct 24 • 10:00 AM
+                                </p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span> Grand Hall, London
+                                </p>
+</div>
+<div class="px-3 py-1 bg-secondary-container/30 text-on-secondary-container text-xs font-bold rounded-full">
+                                Confirmed ✓
+                            </div>
+</div>
+<!-- Event Card 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-center gap-4 transition-all hover:shadow-md">
+<img class="w-16 h-16 rounded-lg object-cover" data-alt="Outdoor garden party with string lights and elegant wooden furniture in a lush green environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHY_oWODy_MKax7h_YBTb8qqFKXMLNpcYDx_uL8_SbMHFTw9wdAYDEaK3oGIXS3CPVZhflmid-iskDnMnpC1S9h6EETPiX2XEFflMIRIE9bbjVRzokROIBMn0uoK-eIadvD2vLDl3d8oPUDD_7RwA77xpZ_u40UWgf4gjzBF_9LxWWuy9_ouCGtIzPMJyyWdmMnxA2oTCTiQmEUJ-wkAjUXYm_uFI-5QGld-zVwzCuvFJjby71c7BsAnglwRRUh6Gj0YrGusZ6q2V"/>
+<div class="flex-1">
+<h3 class="font-bold text-on-surface leading-tight">Green Urbanism Workshop</h3>
+<p class="text-xs text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span> Oct 28 • 02:30 PM
+                                </p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span> The Botanical Hub
+                                </p>
+</div>
+<div class="px-3 py-1 bg-secondary-container/30 text-on-secondary-container text-xs font-bold rounded-full">
+                                Confirmed ✓
+                            </div>
+</div>
+<!-- Event Card 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-center gap-4 transition-all hover:shadow-md">
+<img class="w-16 h-16 rounded-lg object-cover" data-alt="Boutique gallery event with minimalist art on white walls and guests mingling with wine glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs_lPECq-dkA02C98mEOyTulNJv-y8sC7qJnrB7adD9tV8PjAAE1E9f9rA7DinJtVdlwzltbXrchNd858OMFttCAc2W1XHXOTBt4pN5CJFEgFYrTAVBiZbkR19R7S_GyGM7u2KbCewDaQf_CXG6cLz9T_rgrxrR7Qp87Vy0bqh8DwObpAvh6-qftBmY287ZwvFJZmBuf636tssqxYWtE26AYMdikf6Q6VnMCH9GfpIIM4udPNwNKA0kZYmYhn4mkhud7LahA-s2UPF"/>
+<div class="flex-1">
+<h3 class="font-bold text-on-surface leading-tight">Minimalist Design Expo</h3>
+<p class="text-xs text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span> Nov 05 • 06:00 PM
+                                </p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span> Gallery Row
+                                </p>
+</div>
+<div class="px-3 py-1 bg-secondary-container/30 text-on-secondary-container text-xs font-bold rounded-full">
+                                Confirmed ✓
+                            </div>
+</div>
+</div>
+</section>
+<!-- Saved Events -->
+<section>
+<div class="flex items-center gap-2 mb-6">
+<h2 class="text-xl font-bold font-headline tracking-tight text-on-surface">Saved Events ❤️</h2>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-center gap-4 group">
+<img class="w-16 h-16 rounded-lg object-cover" data-alt="Energetic live music concert with blue and purple lighting and silhouetted crowd cheering" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4ZI8KR9YyAJ7Q-qCuD5mRzutP_0FbbEZbGGIrHXFsRaWIcyA-h_PR8wiBou022j5calPJy_tEe8QB7csN6cQzvYWmYnQb2KdINQyCS28doEhENuuV9wcWZumPZIYg9X1ZJEttFponc3E9eJmP2YJPKtx3l8WlW0MkAQLHtSU7P8-tptcw9Ei46E2UG36G2gRmcXBjCHLeiYfCfkksULOKT2V0DnUmw2gR6AM3kYLO42GLM8W3knNjwxSmDxtWnfR-llq_Ugh7w9ZC"/>
+<div class="flex-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-error text-[16px]" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<h3 class="font-bold text-on-surface leading-tight">Future Beats Festival</h3>
+</div>
+<p class="text-xs text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="calendar_today">calendar_today</span> Dec 12, 2024
+                                </p>
+</div>
+<button class="text-error text-xs font-semibold hover:underline opacity-0 group-hover:opacity-100 transition-opacity">Unsave</button>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-center gap-4 group">
+<img class="w-16 h-16 rounded-lg object-cover" data-alt="Group of creative professionals having a brainstorm session in a bright modern co-working space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSY-_LOreXvNgJXumWb8UhXm0WbNPKKBngYKndqjQSFk06PlpsTMCk-pP1dP4NPHpgI7gD8ruwjWbqDKF3nynhEGtthN1xRHu_3N-9qzMaQBIxfFzSwkSqPSx7l57GC-Kz7Hon2_noYVcxzDSrzFZNmQCkx7u2u9dQ7sJMk1DwAxn9sPX--qgT9K_fp9PsFiZfSbgBNH2FxWcqWYKia-iCsg2tUNasp4r5A3x5I4lSMqX5pz0cxFwBGo6Ivf95YBwotB9LcXNMoMZV"/>
+<div class="flex-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-error text-[16px]" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<h3 class="font-bold text-on-surface leading-tight">Startup Mentorship Circle</h3>
+</div>
+<p class="text-xs text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="calendar_today">calendar_today</span> Jan 15, 2025
+                                </p>
+</div>
+<button class="text-error text-xs font-semibold hover:underline opacity-0 group-hover:opacity-100 transition-opacity">Unsave</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Timeline Column -->
+<aside class="lg:col-span-4 space-y-6">
+<div class="bg-surface-container-low p-8 rounded-2xl h-full">
+<h2 class="text-xl font-bold font-headline tracking-tight text-on-surface mb-8">Coming Up</h2>
+<div class="relative space-y-10 pl-2">
+<!-- Timeline Line -->
+<div class="absolute left-[1.125rem] top-2 bottom-2 w-0.5 bg-secondary-container"></div>
+<!-- Timeline Item 1 -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-5 h-5 rounded-full border-4 border-surface-container-low bg-secondary z-10"></div>
+<div class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-wider rounded-lg uppercase mb-2">
+                                Today • 10:00
+                            </div>
+<h4 class="font-bold text-on-surface">AI Summit Morning Keynote</h4>
+<p class="text-xs text-on-surface-variant">Main Stage, Grand Hall</p>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-5 h-5 rounded-full border-4 border-surface-container-low bg-secondary z-10"></div>
+<div class="inline-block px-3 py-1 bg-surface-container-high text-on-surface-variant text-[10px] font-bold tracking-wider rounded-lg uppercase mb-2">
+                                Tomorrow • 14:00
+                            </div>
+<h4 class="font-bold text-on-surface">Networking Lunch: Clean Tech</h4>
+<p class="text-xs text-on-surface-variant">Rooftop Lounge</p>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-5 h-5 rounded-full border-4 border-surface-container-low bg-secondary z-10"></div>
+<div class="inline-block px-3 py-1 bg-surface-container-high text-on-surface-variant text-[10px] font-bold tracking-wider rounded-lg uppercase mb-2">
+                                Oct 28 • 14:30
+                            </div>
+<h4 class="font-bold text-on-surface">Green Urbanism Workshop</h4>
+<p class="text-xs text-on-surface-variant">The Botanical Hub</p>
+</div>
+<!-- Timeline Item 4 -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-5 h-5 rounded-full border-4 border-surface-container-low bg-secondary-container/50 z-10"></div>
+<div class="inline-block px-3 py-1 bg-surface-container-high text-on-surface-variant text-[10px] font-bold tracking-wider rounded-lg uppercase mb-2">
+                                Nov 02 • 09:00
+                            </div>
+<h4 class="font-bold text-on-surface-variant italic">Placeholder: Free Slot</h4>
+<p class="text-xs text-on-surface-variant/60">No events scheduled</p>
+</div>
+</div>
+<button class="mt-12 w-full py-3 bg-white text-primary text-sm font-bold rounded-xl shadow-sm border border-outline-variant/10 hover:bg-surface-container-high transition-colors">
+                        View Full Calendar
+                    </button>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-[#0e3c12] dark:bg-stone-950 font-['Inter'] text-sm tracking-wide text-white dark:text-stone-200 mt-20 tonal-shift-top">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-[1400px] mx-auto px-8 gap-6">
+<div class="flex flex-col md:flex-row items-center gap-8">
+<span class="text-white/60">© 2024 GLA Events Platform. All rights reserved.</span>
+</div>
+<div class="flex gap-8">
+<a class="text-stone-300/80 hover:text-[#6cf8bb] transition-colors" href="#">Privacy Policy</a>
+<a class="text-stone-300/80 hover:text-[#6cf8bb] transition-colors" href="#">Terms of Service</a>
+<a class="text-stone-300/80 hover:text-[#6cf8bb] transition-colors" href="#">Contact Support</a>
+<a class="text-stone-300/80 hover:text-[#6cf8bb] transition-colors" href="#">Documentation</a>
+</div>
+</div>
+</footer>
+</body></html>
