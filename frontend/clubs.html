@@ -75,14 +75,8 @@
       .material-symbols-outlined {
         font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       }
-      html {
-        scroll-behavior: smooth;
-      }
       .no-scrollbar::-webkit-scrollbar { display: none; }
       .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-      #club-list {
-        scroll-margin-top: 5rem;
-      }
       /* Navbar hover effect: subtle lift and smooth color change */
       nav a {
         transition: color .18s ease, transform .18s ease;
@@ -102,11 +96,11 @@
       </div>
     </div>
     <nav class="hidden md:flex items-center space-x-8 font-manrope font-semibold tracking-tight">
-      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 transition-transform duration-200" href="/dashboard">Dashboard</a>
-      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 transition-transform duration-200" href="/homepage">Discover</a>
-      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 transition-transform duration-200" href="/calendar">Calendar</a>
-      <a class="text-emerald-900 dark:text-emerald-50 border-b-2 border-emerald-900 pb-1 font-semibold" href="/clubs">Clubs</a>
-      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 transition-transform duration-200" href="/venues">Venues</a>
+      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 transition-transform duration-200" href="dashboard.html">Dashboard</a>
+      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 transition-transform duration-200" href="homepage.html">Discover</a>
+      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 transition-transform duration-200" href="calendar.html">Calendar</a>
+      <a class="text-emerald-900 dark:text-emerald-50 border-b-2 border-emerald-900 pb-1 font-semibold" href="clubs.html">Clubs</a>
+      <a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 transition-transform duration-200" href="venues.html">Venues</a>
     </nav>
     <div class="flex items-center space-x-4">
       <button class="material-symbols-outlined text-emerald-900 dark:text-emerald-100 p-2" data-icon="search">search</button>
@@ -127,8 +121,8 @@
         <h1 class="font-headline text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary leading-tight mb-4">Find Your People. Build Something Great.</h1>
         <p class="text-lg text-on-surface-variant max-w-2xl mb-6">Join student-run communities that match your passion — workshops, hackathons, cultural fests, and more. Dive in, meet peers, and lead projects.</p>
         <div class="flex flex-wrap gap-3 mb-6">
-          <a href="#club-list" class="px-6 py-3 bg-primary text-white rounded-full font-semibold hover:shadow-lg transition">Explore All Clubs</a>
-          <a class="px-6 py-3 border-2 border-primary text-primary rounded-full font-semibold hover:bg-primary hover:text-white transition" href="/calendar">Browse Events</a>
+          <button class="px-6 py-3 bg-primary text-white rounded-full font-semibold hover:shadow-lg transition">Explore All Clubs</button>
+          <a class="px-6 py-3 border-2 border-primary text-primary rounded-full font-semibold hover:bg-primary hover:text-white transition" href="#">Browse Events</a>
         </div>
         <div class="relative max-w-xl">
           <input class="w-full bg-surface-container-lowest border-none rounded-2xl py-4 pl-14 pr-4 shadow-sm focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline" placeholder="Search clubs, events or tags..." type="text"/>
@@ -151,7 +145,7 @@
   </div>
 </section>
 <!-- Clubs Grid Section -->
-<section id="club-list" class="bg-surface py-20 px-6">
+<section class="bg-surface py-20 px-6">
 <div class="max-w-7xl mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <!-- Club Card 1: CodeCraft -->
