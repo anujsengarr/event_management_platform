@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discover</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#002113",
+              "tertiary-container": "#74364c",
+              "background": "#f4fbf4",
+              "primary": "#0e3c12",
+              "on-primary-fixed-variant": "#235024",
+              "primary-fixed-dim": "#a1d39a",
+              "outline": "#72796e",
+              "surface-container-low": "#eef5ee",
+              "tertiary-fixed-dim": "#ffb1c8",
+              "on-tertiary": "#ffffff",
+              "on-primary-container": "#95c78e",
+              "surface-container-high": "#e3eae3",
+              "on-surface": "#161d19",
+              "error-container": "#ffdad6",
+              "on-secondary-container": "#00714d",
+              "inverse-on-surface": "#ecf3ec",
+              "surface-tint": "#3b6939",
+              "inverse-surface": "#2b322e",
+              "error": "#ba1a1a",
+              "on-surface-variant": "#42493f",
+              "surface-dim": "#d5dcd5",
+              "on-tertiary-fixed-variant": "#703348",
+              "surface-bright": "#f4fbf4",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#002204",
+              "on-primary": "#ffffff",
+              "on-tertiary-container": "#f5a3bc",
+              "on-background": "#161d19",
+              "tertiary-fixed": "#ffd9e2",
+              "surface-container-highest": "#dde4dd",
+              "primary-container": "#275427",
+              "on-error": "#ffffff",
+              "secondary-fixed": "#6ffbbe",
+              "secondary-fixed-dim": "#4edea3",
+              "surface-variant": "#dde4dd",
+              "surface-container": "#e9f0e9",
+              "surface": "#f4fbf4",
+              "tertiary": "#592035",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#a1d39a",
+              "outline-variant": "#c2c9bc",
+              "on-tertiary-fixed": "#3a071d",
+              "secondary": "#006c49",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#005236",
+              "secondary-container": "#6cf8bb",
+              "primary-fixed": "#bcf0b4"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(14, 60, 18, 0.06);
+        }
+      /* Navbar hover effect: subtle lift and smooth color change */
+      nav a {
+        transition: color .18s ease, transform .18s ease;
+        will-change: transform, color;
+      }
+      nav a:hover { transform: translateY(-3px); }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<header class="bg-white/80 dark:bg-emerald-950/80 backdrop-blur-xl docked full-width top-0 z-50 no-border bg-surface-container-low flat no shadows sticky top-0">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-emerald-900 dark:text-emerald-50 font-headline"><div class="flex items-center gap-3">
+<img alt="GLA University Shield" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD3_Or2ObFQcHh2Ljll8G5YSb_rBGZ4CzMVToB4LJEkkclRUYTqQjgsXe2gH86HQtZVg1_un844EI1ecYYturcZPUOfEIIuwIe-MZm0IM7o3_D86XGSThJg4aEgZdFSJFMc6l__f-KYXcud76Qb4DvE0h1pIDmAasPDn9oRKcB1bPYQLN0Ri6mZefhVm-4AeSxUYPFCBOOiuqN6PYrlwkegZfjvgnGlkXU5AgU_d5Di40G6QKSDcEDc2fDnpiMBoGdkazwN7CZWivn"/>
+<span>GLAU Events</span>
+</div></div>
+<nav class="hidden md:flex items-center space-x-8 font-manrope font-semibold tracking-tight">
+<a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 hover:scale-105 transition-transform duration-200 ease-out" href="/dashboard">Dashboard</a><a class="hover:scale-105 transition-transform duration-200 ease-out dark:text-emerald-50 hover:text-emerald-800 border-b-2 border-emerald-900 dark:border-emerald-50 pb-1 text-emerald-900 font-semibold" href="/homepage">Discover</a>
+<a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 hover:scale-105 transition-transform duration-200 ease-out" href="/calendar">Calendar</a>
+<a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 hover:scale-105 transition-transform duration-200 ease-out" href="/clubs">Clubs</a>
+<a class="text-slate-500 dark:text-emerald-200/60 hover:text-emerald-800 hover:scale-105 transition-transform duration-200 ease-out" href="/venues">Venues</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="material-symbols-outlined text-emerald-900 dark:text-emerald-100 p-2" data-icon="search">search</button>
+<div class="hidden sm:flex items-center space-x-3">
+<button class="px-5 py-2 text-emerald-900 dark:text-emerald-100 font-semibold hover:scale-105 transition-all">Login</button>
+<button class="px-5 py-2 bg-primary text-on-primary rounded-full font-semibold hover:scale-105 transition-all shadow-sm">Sign Up</button>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="bg-[#f0f7f0] pt-20 pb-16 px-6">
+<div class="max-w-4xl mx-auto text-center">
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tighter text-primary mb-8">Explore Events</h1>
+<!-- Search Bar -->
+<div class="relative max-w-2xl mx-auto mb-10 group">
+<input class="w-full bg-surface-container-lowest border-none rounded-2xl py-5 px-14 editorial-shadow focus:ring-2 focus:ring-secondary-fixed-dim transition-all text-on-surface placeholder:text-slate-400" placeholder="Search for workshops, fests, or clubs..." type="text"/>
+<span class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-secondary text-2xl" data-icon="search">search</span>
+</div>
+<!-- Filter Chips -->
+<div class="flex flex-wrap justify-center gap-3">
+<button class="px-8 py-2.5 bg-primary-container text-white rounded-full font-semibold shadow-md transition-all scale-102">All</button>
+<button class="px-6 py-2.5 bg-surface-container-lowest text-on-surface-variant border border-outline-variant/30 rounded-full font-medium hover:bg-surface-container-high transition-all">Workshops</button>
+<button class="px-6 py-2.5 bg-surface-container-lowest text-on-surface-variant border border-outline-variant/30 rounded-full font-medium hover:bg-surface-container-high transition-all">Hackathons</button>
+<button class="px-6 py-2.5 bg-surface-container-lowest text-on-surface-variant border border-outline-variant/30 rounded-full font-medium hover:bg-surface-container-high transition-all">Fests</button>
+<button class="px-6 py-2.5 bg-surface-container-lowest text-on-surface-variant border border-outline-variant/30 rounded-full font-medium hover:bg-surface-container-high transition-all">Seminars</button>
+<button class="px-6 py-2.5 bg-surface-container-lowest text-on-surface-variant border border-outline-variant/30 rounded-full font-medium hover:bg-surface-container-high transition-all">Tech</button>
+<button class="px-6 py-2.5 bg-surface-container-lowest text-on-surface-variant border border-outline-variant/30 rounded-full font-medium hover:bg-surface-container-high transition-all">Management</button>
+</div>
+</div>
+</section>
+<!-- Content Section -->
+<section class="bg-surface-container-lowest py-20 px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Event Card 1 -->
+<div class="group bg-surface-container-lowest rounded-2xl editorial-shadow transition-all duration-300 hover:-translate-y-2 relative">
+<div class="aspect-[16/10] w-full overflow-hidden rounded-t-2xl relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern university lecture hall filled with students attending a high-tech workshop with vibrant digital displays and professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeU_Ffd_A7DLPv09rxjfDmzHKN7QWEPhXOZNFL2Di43i0Fj0J8vwb7xqVWcnMSnN_gRtstLCWNX9nefF0h6A5HxoT2gt1G_GvjA6kng04gzPY4NTvPlbWYeuDXPxf-f6T_o1vMJWEVU0UUYpb4Wzew5rBL_zkX2p3_QN6O4Wdd1KkQIn2UQaMrx8KVpRAG-XMcw_kASLxeEdegJ-Xso8o7zSXNVRCetMrfAQ7jjtNJeemt-VbZ2rOjNZoMg1MT8J81mRFz5HZ0EA50"/>
+<span class="absolute top-4 right-4 bg-secondary text-on-secondary px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Workshop</span>
+</div>
+<div class="p-8">
+<h3 class="font-headline text-2xl font-bold text-[#0f172a] mb-4 leading-tight">Mastering AI in Design</h3>
+<div class="flex flex-col space-y-2 mb-6 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+<span class="text-sm">Oct 24, 2024 • 10:00 AM</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-sm">Main Auditorium, Block C</span>
+</div>
+</div>
+<div class="mb-8">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-4 py-1.5 rounded-full text-xs font-semibold">IEEE Student Branch</span>
+</div>
+<div class="flex justify-between items-center border-t border-surface-container-high pt-6">
+<a class="text-secondary font-bold flex items-center group/link" href="#">
+                                    View Details 
+                                    <span class="ml-1 group-hover/link:translate-x-1 transition-transform">→</span>
+</a>
+<button class="material-symbols-outlined text-outline hover:text-error transition-colors" data-icon="favorite">favorite</button>
+</div>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="group bg-surface-container-lowest rounded-2xl editorial-shadow transition-all duration-300 hover:-translate-y-2 relative">
+<div class="aspect-[16/10] w-full overflow-hidden rounded-t-2xl relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Crowded tech hackathon space with developers working on laptops, neon ambient lighting, and high-energy collaborative atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoSehQ25hAShk3IpyI5sB5szow0kVKT6P2cl0xJ7-jXQTrYtaYPHWqVYTWvpo6sOK7aYv23BM5WnJWquiaUtZ3_weKb28fH3yMJcsVG_6x8poC8d47hau3dx1f54TvLEvUj82Vx4Suf1CL74QERsb995ULiYJsxxnin292c-QmbjXtSW9w2aKNp_lCpgCvhUOcXTsHCozmlb7mEPsox4Ag6Nakj04XEyPMO8U3q6_UVaZKmvAhgwckMAzQ8j8diBrBTO_6N_bHNpzK"/>
+<span class="absolute top-4 right-4 bg-secondary text-on-secondary px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Hackathon</span>
+</div>
+<div class="p-8">
+<h3 class="font-headline text-2xl font-bold text-[#0f172a] mb-4 leading-tight">CodeBurst 2024</h3>
+<div class="flex flex-col space-y-2 mb-6 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+<span class="text-sm">Nov 02-04, 2024</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-sm">Innovation Hub</span>
+</div>
+</div>
+<div class="mb-8">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-4 py-1.5 rounded-full text-xs font-semibold">Coding Club</span>
+</div>
+<div class="flex justify-between items-center border-t border-surface-container-high pt-6">
+<a class="text-secondary font-bold flex items-center group/link" href="#">
+                                    View Details 
+                                    <span class="ml-1 group-hover/link:translate-x-1 transition-transform">→</span>
+</a>
+<button class="material-symbols-outlined text-outline hover:text-error transition-colors" data-icon="favorite">favorite</button>
+</div>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="group bg-surface-container-lowest rounded-2xl editorial-shadow transition-all duration-300 hover:-translate-y-2 relative">
+<div class="aspect-[16/10] w-full overflow-hidden rounded-t-2xl relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Dynamic outdoor cultural festival on campus with colorful decorations, live music stage, and diverse crowd celebrating under warm sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJUuMRu10Z7k5QTE_uxAvPu9zaBfNy9FGfso-3uDnLvyY9xJ-nFhfd2paWTVJAAOntlGoE2n7HrBOt7ANMVDNq_wfum4ZhsF6ThEdoahP6GrM7AVnLxpFFbsrTn2SBh4-J3_A5O_lziYc8MXw17MfiRWSpqspWz9Aaq2-um5XaHgkKv0krRzAgdgom-a_kI1LA1CrNuRhHkHRaUUY-dVf-ExVdln5K3kC7eDKyCMyEhwhtuQQzuW7T307k23OapjgTjeMtDw5HGX3R"/>
+<span class="absolute top-4 right-4 bg-secondary text-on-secondary px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Fests</span>
+</div>
+<div class="p-8">
+<h3 class="font-headline text-2xl font-bold text-[#0f172a] mb-4 leading-tight">Sanskriti Cultural Gala</h3>
+<div class="flex flex-col space-y-2 mb-6 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+<span class="text-sm">Dec 12, 2024 • 05:00 PM</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-sm">Open Air Theater</span>
+</div>
+</div>
+<div class="mb-8">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-4 py-1.5 rounded-full text-xs font-semibold">Arts Council</span>
+</div>
+<div class="flex justify-between items-center border-t border-surface-container-high pt-6">
+<a class="text-secondary font-bold flex items-center group/link" href="#">
+                                    View Details 
+                                    <span class="ml-1 group-hover/link:translate-x-1 transition-transform">→</span>
+</a>
+<button class="material-symbols-outlined text-outline hover:text-error transition-colors" data-icon="favorite">favorite</button>
+</div>
+</div>
+</div>
+<!-- Event Card 4 -->
+<div class="group bg-surface-container-lowest rounded-2xl editorial-shadow transition-all duration-300 hover:-translate-y-2 relative">
+<div class="aspect-[16/10] w-full overflow-hidden rounded-t-2xl relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Professional seminar room with a keynote speaker on stage and an engaged audience of university students and professors in business attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB5nDGr9hGPPNHEF4b5Ik5zaXXf582daAaYpa_4nHRocMpvCw_0ii4QNztWV6V90wJeyQUt9ktbdmj7ORwrrxwHCclbYbl58V2TudWjczzmjPYMxlIX5cKk4Xm0R-OEphTAGxRQ-fGDwjqvIdL3ukMu_sw5B7Tg2WDPA9y-6ZxgDXovroEsGSDA7gR8rq6eOVsXrU9Gnv2yVdtSgRu8B18ih5JmEFtI8BqvJ85MzXnDPK8gMGhfHSGTVOPJX-b7LgAJjjwz-5Yp875"/>
+<span class="absolute top-4 right-4 bg-secondary text-on-secondary px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Seminars</span>
+</div>
+<div class="p-8">
+<h3 class="font-headline text-2xl font-bold text-[#0f172a] mb-4 leading-tight">Future of Management</h3>
+<div class="flex flex-col space-y-2 mb-6 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+<span class="text-sm">Nov 15, 2024 • 11:00 AM</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-sm">Management Block Hall</span>
+</div>
+</div>
+<div class="mb-8">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-4 py-1.5 rounded-full text-xs font-semibold">MBA Association</span>
+</div>
+<div class="flex justify-between items-center border-t border-surface-container-high pt-6">
+<a class="text-secondary font-bold flex items-center group/link" href="#">
+                                    View Details 
+                                    <span class="ml-1 group-hover/link:translate-x-1 transition-transform">→</span>
+</a>
+<button class="material-symbols-outlined text-outline hover:text-error transition-colors" data-icon="favorite">favorite</button>
+</div>
+</div>
+</div>
+<!-- Event Card 5 -->
+<div class="group bg-surface-container-lowest rounded-2xl editorial-shadow transition-all duration-300 hover:-translate-y-2 relative">
+<div class="aspect-[16/10] w-full overflow-hidden rounded-t-2xl relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Group of diverse engineering students working on a robotics project in a bright, modern lab with green plant accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGZcyVVUcoRwn49uLJdt2xLVo1qaHcMlcPMDi4hxaAF4kTs4ZznSs-0Drq684kmwRUiQq4biG1V02yku3Ec3ractWB-c6tR0RTTi-9Tmpg7NteON5LPrCL3o9ZzkOEUIMnV1hYUy1-ZC9j79PACplxsRBJGP10DIU0msfcp6eyCT2FnNiXxj3ET_IUIk1XodzPuoC-9aBDgwKEIpz390Ocxg06ZAxDeaOxEzejU_5Wf7XYEvjNxbyIHjN0UzgPAyfMVmHSV0rWPGJb"/>
+<span class="absolute top-4 right-4 bg-secondary text-on-secondary px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Tech</span>
+</div>
+<div class="p-8">
+<h3 class="font-headline text-2xl font-bold text-[#0f172a] mb-4 leading-tight">Robotics Expo 2024</h3>
+<div class="flex flex-col space-y-2 mb-6 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+<span class="text-sm">Oct 28, 2024 • 09:30 AM</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-sm">Engineering Workshop</span>
+</div>
+</div>
+<div class="mb-8">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-4 py-1.5 rounded-full text-xs font-semibold">Robo-Tech Club</span>
+</div>
+<div class="flex justify-between items-center border-t border-surface-container-high pt-6">
+<a class="text-secondary font-bold flex items-center group/link" href="#">
+                                    View Details 
+                                    <span class="ml-1 group-hover/link:translate-x-1 transition-transform">→</span>
+</a>
+<button class="material-symbols-outlined text-outline hover:text-error transition-colors" data-icon="favorite">favorite</button>
+</div>
+</div>
+</div>
+<!-- Event Card 6 -->
+<div class="group bg-surface-container-lowest rounded-2xl editorial-shadow transition-all duration-300 hover:-translate-y-2 relative">
+<div class="aspect-[16/10] w-full overflow-hidden rounded-t-2xl relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Elegant students networking at a business management gala in a sophisticated campus ballroom with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaDXq2fGGB_3OxQhFnC4KEE0vw1yoaJzx5gwHeP-B9fPc3PNdlnQQtOLKn4vgXm9TBwBOKsOKZ1jD3-TmpVGQxqXO6ph2WVGnTTam8Fus62TNAL0bNJN5_fIkggZrQKMZbAPzs97qBUZiC2Cdg-am0-n92hykumGw1oYXGiYU_KCJ2_zXN7mhYEHrt-sFSIVSGYKY-EdqNalqTPBf4EI5jPeN04bOhY-0OPuQ6R7JaBVv-yIdnIdqpgu__bCQMWEn3YXlc8R2oDqB2"/>
+<span class="absolute top-4 right-4 bg-secondary text-on-secondary px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Management</span>
+</div>
+<div class="p-8">
+<h3 class="font-headline text-2xl font-bold text-[#0f172a] mb-4 leading-tight">Corporate Connect</h3>
+<div class="flex flex-col space-y-2 mb-6 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+<span class="text-sm">Nov 20, 2024 • 02:00 PM</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-sm">Placement Cell Hall</span>
+</div>
+</div>
+<div class="mb-8">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-4 py-1.5 rounded-full text-xs font-semibold">Placement Society</span>
+</div>
+<div class="flex justify-between items-center border-t border-surface-container-high pt-6">
+<a class="text-secondary font-bold flex items-center group/link" href="#">
+                                    View Details 
+                                    <span class="ml-1 group-hover/link:translate-x-1 transition-transform">→</span>
+</a>
+<button class="material-symbols-outlined text-outline hover:text-error transition-colors" data-icon="favorite">favorite</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center">
+<button class="px-10 py-4 border-2 border-primary text-primary rounded-full font-bold hover:bg-primary hover:text-white transition-all duration-300 editorial-shadow">
+                        Load More
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[#0e3c12] dark:bg-emerald-950 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-screen-2xl mx-auto">
+<div class="mb-8 md:mb-0">
+<span class="text-xl font-bold text-white">GLAU Events</span>
+<p class="text-emerald-200/60 font-['Plus_Jakarta_Sans'] text-sm mt-2 max-w-xs">Curating the finest campus experiences for the next generation of leaders.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12 text-emerald-200/60 font-['Plus_Jakarta_Sans'] text-sm">
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Privacy Policy</a>
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Terms of Service</a>
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Contact Us</a>
+<a class="hover:text-white hover:underline decoration-emerald-500/50 underline-offset-4 transition-all duration-200" href="#">Support</a>
+</div>
+<div class="mt-8 md:mt-0 text-emerald-200/40 font-['Plus_Jakarta_Sans'] text-xs">
+                © 2024 GLA Events Platform. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>
